@@ -5,12 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <script src="app.js"></script>
     <title>Coin Toss</title>
 </head>
 <body>
-    <div class="coin animate-heads">
-        <div class="heads"></div>
-        <div class="tails"></div>
-    </div>
+    <div class='container'>
+        <h2>You probably don't know this, but flippism is actually a thing.</h2>
+        <h2>Yes, people really do make life decisions based on a coin toss.</h2>
+        <h2>Here you won't even need a real coin.</h2>
+        <div id="coin" class=''>
+          <div id="heads" class="heads"></div>
+          <div id="tails" class="tails"></div>
+        </div>
+        <button id="flip">Flip the coin</button>
+        <p>Heads: <span id="headsCount">0</span> Tails: <span id="tailsCount">0</span></p>
+        <p><span id="status"></span></p>
+      </div>
 </body>
 </html>
