@@ -17,3 +17,17 @@
 .coin .tails {
     background: orange;
 }
+
+.animate-heads {
+    animation: flipHeads 3s;
+}
+
+
+@keyframes flipHeads {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
