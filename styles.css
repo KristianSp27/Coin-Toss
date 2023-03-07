@@ -1,0 +1,19 @@
+.coin {
+    width: 15rem;
+    height: 15rem;
+}
+
+.coin div {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 3px solid black;
+}
+
+.coin .heads {
+    background: skyblue;
+}
+
+.coin .tails {
+    background: orange;
+}
