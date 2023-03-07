@@ -1,6 +1,7 @@
 .coin {
     width: 15rem;
     height: 15rem;
+    transform-style: preserve-3d;
 }
 
 .coin div {
@@ -8,6 +9,8 @@
     height: 100%;
     border-radius: 50%;
     border: 3px solid black;
+    backface-visibility: hidden;
+    position: absolute;
 }
 
 .coin .heads {
@@ -16,10 +19,12 @@
 
 .coin .tails {
     background: orange;
+    transform: rotateY(-180deg);
 }
 
 .animate-heads {
     animation: flipHeads 3s;
+    animation-fill-mode: forwards;
 }
 
 
@@ -29,5 +34,19 @@
     }
     to {
         transform: rotateY(360deg);
+    }
+}
+
+.animate-tails {
+    animation: flipTails 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes flipTails {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(180deg);
     }
 }
