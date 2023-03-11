@@ -61,6 +61,8 @@ flipBtn.addEventListener("click", () => {
 coin.addEventListener("click", () => {
     let i = Math.floor(Math.random() * 2);
     coin.style.animation = "none";
+    const coinSound = new Audio("sound.mp3");
+    coinSound.play();
     if(i){
         setTimeout(function(){
             coin.style.animation = "spin-heads 3s forwards";
@@ -81,6 +83,8 @@ function updateStats(){
     document.querySelector("#tails-count").textContent = `Tails: ${tails}`;
 }
 function disableButton(){
+    const coinSound = new Audio("sound.mp3");
+    coinSound.play();
     flipBtn.disabled = true;
     setTimeout(function(){
         flipBtn.disabled = false;
